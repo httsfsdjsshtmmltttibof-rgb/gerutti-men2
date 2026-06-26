@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tags for SEO and Social Media -->
+    <meta property="og:title" content="Gerutti Men | Rasmiy Sahifa">
+    <meta property="og:description" content="Gerutti Men - Barcha kerakli havolalar, aloqa vositalari va ma'lumotlar bitta joyda. Hammasini shu yerdan toping!">
+    <meta property="og:image" content="https://i.postimg.cc/cJ3VdsyZ/photo-2025-12-20-12-46-08.jpg">
+    <meta property="og:url" content="https://geruttimen.uz/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#FAF3E6">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/cJ3VdsyZ/photo-2025-12-20-12-46-08.jpg">
+    <title>Gerutti Men</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Left Corner -->
+    <div class="top-left-controls">
+
+        <button class="icon-btn save-btn" onclick="handleSave()" title="Saqlash">
+            <i class="fa-solid fa-arrow-down"></i>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="avatar-container">
+                <img src="https://i.postimg.cc/cJ3VdsyZ/photo-2025-12-20-12-46-08.jpg" alt="Gerutti Men" class="avatar">
+                <div class="avatar-ring"></div>
+            </div>
+            <h1 class="name">Gerutti Men <i class="fa-solid fa-circle-check verification-badge" title="Tasdiqlangan"></i></h1>
+            <p class="bio">Hammasini shuyerdan toping!</p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="links">
+            <a href="tel:+998777050033" class="link-btn premium-anim" onclick="trackClick('phone')">
+                <div class="btn-content">
+                    <div class="icon-wrapper"><i class="fa-solid fa-phone"></i></div>
+                    <span>Telefon</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <a href="https://t.me/gerutti_men" target="_blank" class="link-btn premium-anim" onclick="trackClick('tgkanal')">
+                <div class="btn-content">
+                    <div class="icon-wrapper"><i class="fa-brands fa-telegram"></i></div>
+                    <span>Telegram kanal</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <a href="https://t.me/Gerutti_uz" target="_blank" class="link-btn premium-anim" onclick="trackClick('tgadmin')">
+                <div class="btn-content">
+                    <div class="icon-wrapper"><i class="fa-brands fa-telegram"></i></div>
+                    <span>Telegram admin</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <a href="https://www.instagram.com/gerutti_men?igsh=d25ndGhiNDVldTl6" target="_blank" class="link-btn premium-anim" onclick="trackClick('instagram')">
+                <div class="btn-content">
+                    <div class="icon-wrapper"><i class="fa-brands fa-instagram"></i></div>
+                    <span>Instagram</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <a href="https://yandex.ru/maps?text=41.296011,69.250566&si=4q2zh2kd3f3vq0zd2vyrt33r60" target="_blank" class="link-btn premium-anim" onclick="trackClick('location')">
+                <div class="btn-content">
+                    <div class="icon-wrapper"><i class="fa-solid fa-location-dot"></i></div>
+                    <span>Locatsiya</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-container">
+            <h2 class="section-title">Bizning manzilimiz</h2>
+            <a href="https://yandex.ru/maps?text=41.296011,69.250566&si=4q2zh2kd3f3vq0zd2vyrt33r60" target="_blank" class="map-link-wrapper" style="text-decoration: none; display: block;">
+                <div class="map-wrapper" style="position: relative;">
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=69.250566%2C41.296011&z=16" width="100%" height="250" frameborder="0" allowfullscreen="true" style="pointer-events: none; border-radius: 16px;"></iframe>
+                </div>
+            </a>
+        </div>
+
+        <!-- Analytics Access -->
+        <div class="analytics-trigger-container">
+            <button class="analytics-btn" onclick="openAnalyticsLogin()">
+                <i class="fa-solid fa-chart-line"></i> Analitika
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <button class="security-text" onclick="showSecurityMessage()">safeneolink2025</button>
+    </footer>
+
+    <!-- Bottom Right Controls -->
+    <div class="bottom-right-controls">
+        <button class="icon-btn share-btn" onclick="handleShare()" title="Ulashish">
+            <i class="fa-solid fa-share-nodes"></i>
+        </button>
+    </div>
+
+    <!-- Modals -->
+    <!-- Analytics Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModals()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <i class="fa-solid fa-lock gold-icon"></i>
+                <h2>Maxfiy ruxsat</h2>
+            </div>
+            <p>Analitikani ko'rish uchun parolni kiriting</p>
+            <input type="password" id="analyticsPassword" placeholder="Parol...">
+            <p id="loginError" class="error-msg">Parol xato!</p>
+            <button class="submit-btn" onclick="checkPassword()">Kirish</button>
+        </div>
+    </div>
+
+    <!-- Analytics Dashboard Modal -->
+    <div id="analyticsModal" class="modal">
+        <div class="modal-content dashboard-content dark-mode">
+            <button class="close-btn" onclick="closeModals()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="dashboard-header">
+                <i class="fa-solid fa-chart-pie gold-icon"></i>
+                <h2>Analitika</h2>
+            </div>
+            
+            <div class="top-stats-grid">
+                <div class="top-stat-card">
+                    <i class="fa-solid fa-eye stat-icon"></i>
+                    <h3>JAMI KIRIMLAR</h3>
+                    <p class="stat-value" id="totalVisits">0</p>
+                </div>
+                <div class="top-stat-card">
+                    <i class="fa-solid fa-calendar-day stat-icon"></i>
+                    <h3>BUGUNGI</h3>
+                    <p class="stat-value" id="todayVisits">0</p>
+                </div>
+            </div>
+
+            <h3 class="stats-subtitle">Tugmalar Statistikasi</h3>
+            
+            <div class="button-stats-list">
+                <div class="btn-stat-item">
+                    <div class="btn-stat-left"><i class="fa-solid fa-phone"></i> Telefon</div>
+                    <div class="btn-stat-right" id="clicks_phone">0</div>
+                </div>
+                <div class="btn-stat-item">
+                    <div class="btn-stat-left"><i class="fa-brands fa-telegram"></i> TG Admin</div>
+                    <div class="btn-stat-right" id="clicks_tgadmin">0</div>
+                </div>
+                <div class="btn-stat-item">
+                    <div class="btn-stat-left"><i class="fa-brands fa-telegram"></i> TG Kanal</div>
+                    <div class="btn-stat-right" id="clicks_tgkanal">0</div>
+                </div>
+                <div class="btn-stat-item">
+                    <div class="btn-stat-left"><i class="fa-brands fa-instagram"></i> Instagram</div>
+                    <div class="btn-stat-right" id="clicks_instagram">0</div>
+                </div>
+                <div class="btn-stat-item">
+                    <div class="btn-stat-left"><i class="fa-solid fa-location-dot"></i> Locatsiya</div>
+                    <div class="btn-stat-right" id="clicks_location">0</div>
+                </div>
+            </div>
+
+            <div class="firebase-status">
+                <i class="fa-solid fa-database"></i> Firebase real-time ulanishga tayyor
+            </div>
+        </div>
+    </div>
+
+    <!-- Security Alert Modal -->
+    <div id="securityModal" class="modal">
+        <div class="modal-content text-center">
+            <button class="close-btn" onclick="closeModals()"><i class="fa-solid fa-xmark"></i></button>
+            <i class="fa-solid fa-shield-halved gold-icon large-icon"></i>
+            <h3 class="security-msg">Xafsizlik neolink uchun 1-chi o'rinda!</h3>
+        </div>
+    </div>
+
+    <!-- Install Modal for iOS -->
+    <div id="installModal" class="modal">
+        <div class="modal-content text-center">
+            <button class="close-btn" onclick="closeModals()"><i class="fa-solid fa-xmark"></i></button>
+            <i class="fa-brands fa-apple large-icon" style="color: #1A1A1A;"></i>
+            <h3 style="margin-bottom: 10px; color: var(--text-primary);">Ekranga saqlash</h3>
+            <p style="font-size: 15px; line-height: 1.5; color: var(--text-secondary);">
+                Ilovani telefoningizga o'rnatish uchun pastdagi <b style="color: var(--text-primary);">Ulashish (Share)</b> tugmasini bosing va menyudan <br><br>
+                <b style="color: var(--text-primary);">"Asosiy ekranga qo'shish"<br>(Add to Home Screen)</b><br><br>
+                ni tanlang.
+            </p>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, onValue, runTransaction, get, set, update } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC51tO_G63tZvQqC_nvnHdbZm7d_v0iBAw",
+            authDomain: "geruttimen.firebaseapp.com",
+            databaseURL: "https://geruttimen-default-rtdb.firebaseio.com",
+            projectId: "geruttimen",
+            storageBucket: "geruttimen.firebasestorage.app",
+            messagingSenderId: "585170269533",
+            appId: "1:585170269533:web:c0bc7a9cc7f773564124b4",
+            measurementId: "G-75B0BPFFY8"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        // --- SAYTGA KIRISH SONINI HISOBLASH ---
+        const today = new Date().toISOString().split('T')[0]; // "2025-06-26"
+        const totalRef = ref(db, 'analytics/totalVisits');
+        const todayRef = ref(db, `analytics/dailyVisits/${today}`);
+
+        runTransaction(totalRef, (current) => (current || 0) + 1);
+        runTransaction(todayRef, (current) => (current || 0) + 1);
+
+        // --- ANALITIKA OYNASI OCHILGANDA REAL VAQTDA MA'LUMOT KO'RSATISH ---
+        window.loadAnalyticsData = function() {
+            // Jami kirish
+            onValue(totalRef, (snap) => {
+                const el = document.getElementById('totalVisits');
+                if(el) el.textContent = snap.val() || 0;
+            });
+
+            // Bugungi kirish
+            onValue(todayRef, (snap) => {
+                const el = document.getElementById('todayVisits');
+                if(el) el.textContent = snap.val() || 0;
+            });
+
+            // Tugmalar statistikasi
+            const buttons = ['phone','tgadmin','tgkanal','instagram','location'];
+            buttons.forEach(btn => {
+                const btnRef = ref(db, `analytics/clicks/${btn}`);
+                onValue(btnRef, (snap) => {
+                    const el = document.getElementById(`clicks_${btn}`);
+                    if(el) el.textContent = snap.val() || 0;
+                });
+            });
+        };
+
+        // --- TUGMA BOSILGANDA FIREBASE GA YOZISH ---
+        window.trackClick = function(btnName) {
+            const clickRef = ref(db, `analytics/clicks/${btnName}`);
+            runTransaction(clickRef, (current) => (current || 0) + 1);
+        };
+
+        // Firebase status ko'rsatish
+        const statusEl = document.querySelector('.firebase-status');
+        if(statusEl) {
+            statusEl.innerHTML = '<i class="fa-solid fa-circle" style="color:#4CAF50; font-size:8px;"></i> Firebase ulandi — real vaqt ma\'lumotlar';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+

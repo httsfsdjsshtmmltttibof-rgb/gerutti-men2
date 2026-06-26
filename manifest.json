@@ -1,0 +1,21 @@
+{
+  "name": "Gerutti Men",
+  "short_name": "Gerutti Men",
+  "description": "Gerutti Men - Barcha kerakli havolalar va ma'lumotlar bitta joyda.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FAF3E6",
+  "theme_color": "#D4AF37",
+  "icons": [
+    {
+      "src": "https://i.postimg.cc/cJ3VdsyZ/photo-2025-12-20-12-46-08.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https://i.postimg.cc/cJ3VdsyZ/photo-2025-12-20-12-46-08.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
